@@ -17,3 +17,5 @@ const index = ({ children, color, state, className }: Props) => {
     children
   );
 };
+
+export default index;
