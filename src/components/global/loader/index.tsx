@@ -8,7 +8,7 @@ type Props = {
   color?: string;
 };
 
-const index = ({ children, color, state, className }: Props) => {
+const Loader = ({ children, color, state, className }: Props) => {
   return state ? (
     <div className={cn(className)}>
       <Spinner color={color} />
@@ -18,4 +18,4 @@ const index = ({ children, color, state, className }: Props) => {
   );
 };
 
-export default index;
+export default Loader;
