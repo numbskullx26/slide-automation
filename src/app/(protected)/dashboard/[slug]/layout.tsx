@@ -1,3 +1,4 @@
+import Navbar from "@/components/global/navbar";
 import Sidebar from "@/components/global/sidebar/index";
 import React from "react";
 
@@ -16,6 +17,9 @@ const layout = ({ children, params }: Props) => {
       {/* Sidebar */}
       <Sidebar slug={params.slug} />
       {/* Navbar */}
+      <div className="flex flex-col overlow-auto lg:ml-[250px] lg:pl-10 lg:py-5">
+        <Navbar slug={params.slug} />
+      </div>
     </div>
   );
 };
