@@ -3,7 +3,7 @@ import { PAGE_BREAD_CRUMBS } from "@/constants/pages";
 import { usePaths } from "@/hooks/use-nav";
 import React from "react";
 import Sheet from "../sheet";
-import { Menu, Search } from "lucide-react";
+import { Menu } from "lucide-react";
 import { LogoSmall } from "@/svgs/logo-small";
 import Items from "../sidebar/items";
 import { Separator } from "@radix-ui/react-separator";
@@ -11,6 +11,10 @@ import ClerkAuthState from "../clerk-auth-state";
 import { HelpDuoToneWhite } from "@/icons";
 import { SubscriptionPlan } from "../subscription-plan";
 import UpgradeCard from "../sidebar/upgrade";
+import CreateAutomation from "../create-automation";
+import Search from "./search";
+import Notifications from "./notifications";
+import MainBreadCrumb from "../main-bread-crumb/index";
 
 type Props = {
   slug: string;
@@ -57,8 +61,15 @@ const Navbar = ({ slug }: Props) => {
               </div>
             </Sheet>
           </span>
+          {/* Search Component */}
           <Search />
+          {/* Automation button */}
+          <CreateAutomation />
+          {/* Notifications */}
+
+          <Notifications />
         </div>
+        <MainBreadCrumb slug={slug} page={page == slug ? "Home" : page} />
       </div>
     )
   );
