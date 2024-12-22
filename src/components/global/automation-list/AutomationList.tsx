@@ -50,7 +50,12 @@ const AutomationList = (props: Props) => {
             October 10th 2024
           </p>
 
-          <GradientButton />
+          <GradientButton
+            type="BUTTON"
+            className="w-full bg-background-80 hover:bg-background-80 text-white"
+          >
+            Smart AI
+          </GradientButton>
         </div>
       </Link>
     </div>
