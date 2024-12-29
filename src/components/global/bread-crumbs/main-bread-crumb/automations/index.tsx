@@ -1,12 +1,15 @@
+import ActivateAutomationButton from "@/components/global/activate-automation-button";
 import { PencilDuoToneBlack } from "@/icons";
 import { ChevronRight } from "lucide-react";
 import React from "react";
 
-type Props = {};
+type Props = {
+  id: String;
+};
 
-const AutomationsBreadCrumb = (props: Props) => {
+const AutomationsBreadCrumb = ({ id }: Props) => {
   // WIP : GET THE AUTOMATON LIST DATA
-
+  // WIP : User mutation stuff to update the automations
   return (
     <div className="flex justify-between items-center rounded-full w-full p-5 bg-[#18181B1A]">
       <div className="flex gap-x-3 items-center">
@@ -39,8 +42,7 @@ const AutomationsBreadCrumb = (props: Props) => {
           </p>
         </div>
       </div>
-
-      
+      <ActivateAutomationButton />
     </div>
   );
 };
