@@ -1,3 +1,4 @@
+import { getAllAutomations } from "@/actions/automations";
 import { onUserInfo } from "@/actions/user";
 import { QueryClient, QueryFunction } from "@tanstack/react-query";
 
@@ -12,6 +13,7 @@ const prefetch = async (
     staleTime: 60000,
   });
 };
+
 
 export const PrefetchUserProfile = async (client: QueryClient) => {
   //returns a call to the prefetch function which takes the "client,server action and key" as parameters

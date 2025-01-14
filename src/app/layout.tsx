@@ -4,6 +4,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { Toaster } from "@/components/ui/toaster";
+import ReactQueryProvider from "@/providers/react-query-provider";
 
 const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
@@ -27,7 +28,8 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            {children}
+            {/* custom component created in providers */}
+            <ReactQueryProvider>{children}</ReactQueryProvider>
             <Toaster />
           </ThemeProvider>
         </body>
