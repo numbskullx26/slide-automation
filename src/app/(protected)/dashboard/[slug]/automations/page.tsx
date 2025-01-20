@@ -1,3 +1,4 @@
+
 import AutomationList from "@/components/global/automation-list/AutomationList";
 import CreateAutomation from "@/components/global/create-automation";
 import { Check } from "lucide-react";
@@ -7,6 +8,8 @@ type Props = {};
 
 const page = (props: Props) => {
   //WIP : fetch actual automations from the server
+
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-6 gap-6">
       <div className="lg:col-span-4">
